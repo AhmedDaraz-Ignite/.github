@@ -1,0 +1,70 @@
+name: Task
+description: Technical work with no direct user story, such as an upgrade, cleanup, or migration.
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use Feature instead when a person gains a new capability.
+        Task is for upgrades, cleanups, migrations, and infrastructure.
+
+        Title the issue with the end state.
+        Good: `Node 22 on every CI job`.
+        Bad: `Node upgrade work`.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: One sentence. What is true after this is done?
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_now
+    attributes:
+      label: Why now
+      description: What breaks, slows down, or costs money if this waits?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Name what is out as clearly as what is in. That is what stops the work from growing.
+      value: |
+        In:
+        -
+
+        Out:
+        -
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition_of_done
+    attributes:
+      label: Definition of done
+      description: One line per finished thing. Each line must be something a person can check and tick.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: The command to run, or the thing to look at, that proves it is done.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Issues, pull requests, or outside work this waits on. Write `None` if there are none.
+    validations:
+      required: false
