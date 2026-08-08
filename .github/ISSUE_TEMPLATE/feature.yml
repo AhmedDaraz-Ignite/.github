@@ -1,0 +1,66 @@
+name: Feature
+description: Ask for a new capability, written as a user story.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A user story describes an outcome, not a solution.
+        Write what someone should be able to do and why it helps them.
+        How to build it belongs in the pull request.
+
+        Title the issue with the outcome.
+        Good: `Risk Map counts APA records per project`.
+        Bad: `Add a count query to the Risk Map service`.
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User story
+      description: One story per issue. Two roles or two outcomes means two issues.
+      value: |
+        As a <role>,
+        I want <capability>,
+        so that <benefit>.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_today
+    attributes:
+      label: Problem today
+      description: What does that role do now, and why is it painful?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: >
+        One line per behavior. Each line must be something a person can check and tick.
+        Good: `The Risk Map shows 'Analytical Procedure Attributes' when the project has more than one APA record.`
+        Bad: `Pluralization works correctly.`
+        Give failure and edge cases their own lines.
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: What this issue deliberately does not cover.
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Issues, pull requests, or outside work this waits on. Write `None` if there are none.
+    validations:
+      required: false
