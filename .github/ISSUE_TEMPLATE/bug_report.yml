@@ -1,6 +1,5 @@
 name: Bug report
 description: Report something that behaves differently from what you expected.
-title: "<what is wrong, not how to fix it>"
 labels: ["bug"]
 body:
   - type: markdown
@@ -9,6 +8,10 @@ body:
         A bug report describes what you saw, not how to fix it.
         Root cause, the patch, and test results belong in the pull request.
         If the work is already done, open a pull request instead of an issue.
+
+        Title the issue with the wrong behavior, not the fix.
+        Good: `Risk Map shows the singular label for Analytical Procedure Attributes`.
+        Bad: `Fix pluralization in Risk Map`.
 
   - type: textarea
     id: description
