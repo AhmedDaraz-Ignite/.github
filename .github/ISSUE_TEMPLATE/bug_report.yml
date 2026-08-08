@@ -1,0 +1,72 @@
+name: Bug report
+description: Report something that behaves differently from what you expected.
+title: "<what is wrong, not how to fix it>"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A bug report describes what you saw, not how to fix it.
+        Root cause, the patch, and test results belong in the pull request.
+        If the work is already done, open a pull request instead of an issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One or two sentences on the broken behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Pre-requisites
+      description: The state needed before step 1. Write `None` if it reproduces from a clean start.
+      placeholder: An AP project that contains at least one APA record.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: One user action per step. No function names, no file paths, no internal state.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected results
+      description: What should happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual results
+      description: What happens now. Quote exact on-screen text in single quotes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag images or a recording here. Show the working case next to the broken one when one exists.
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: Version or environment
+      description: Release, commit, or URL where you saw this.
+    validations:
+      required: false
